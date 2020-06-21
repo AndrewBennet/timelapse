@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-PHOTO_DIR=/home/pi/Desktop/timelapse/timelapse_photos
-VIDEO_DIR=/home/pi/Desktop/timelapse/timelapse_videos
+PHOTO_DIR=/home/pi/Desktop/timelapse_photos
+VIDEO_DIR=/home/pi/Desktop/timelapse_videos
 FULL_TIMELAPSE=$VIDEO_DIR/full_timelapse.avi
 
 # Get yesterday's date
