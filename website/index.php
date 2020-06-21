@@ -12,7 +12,7 @@
           $files = scandir('timelapse_photos', SCANDIR_SORT_DESCENDING);
           $newest_file = $files[0];
           echo "<div>Latest Photo: " . $newest_file . "</div>";
-          echo "<img width=\"600\" src=\"./timelapse_photos/" . $newest_file . "\"/>";
+          echo "<img src=\"./timelapse_photos/" . $newest_file . "\"/>";
 
           $videos = scandir('timelapse_videos', SCANDIR_SORT_DESCENDING);
           $newest_video = $videos[0];
