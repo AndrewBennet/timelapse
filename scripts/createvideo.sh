@@ -28,6 +28,6 @@ if ls "${FULL_TIMELAPSE}"; then
     mv $TEMP_FULL_TIMELAPSE $FULL_TIMELAPSE
     echo "Completed."
 else
-    mv $VIDEO_DIR/$YESTEDAY.avi $FULL_TIMELAPSE
+    mv $VIDEO_DIR/$YESTERDAY.avi $FULL_TIMELAPSE
     echo "No existing full timelapse video: now created."
 fi
