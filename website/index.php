@@ -11,14 +11,17 @@
         <?php
           $files = scandir('timelapse_photos', SCANDIR_SORT_DESCENDING);
           $newest_file = $files[0];
-          echo "<div>Latest Photo: " . $newest_file . "</div>";
+          echo "<div>Latest Photo Timestamp: " . $newest_file . "</div>";
           echo "<img src=\"./timelapse_photos/" . $newest_file . "\"/>";
-
-          $videos = scandir('timelapse_videos', SCANDIR_SORT_DESCENDING);
-          $newest_video = $videos[0];
-          echo "<a href=\"./timelapse_videos/" . $newest_video . "\"/>Download Video</a>";
-          echo "<a href=\"./timelapse_photos\">See All Photos</a>";
         ?>
+        <div>
+          <?php
+            $videos = scandir('timelapse_videos', SCANDIR_SORT_DESCENDING);
+            $newest_video = $videos[0];
+            echo "<a href=\"./timelapse_videos/" . $newest_video . "\"/>Download Video</a>";
+          ?>
+          <a href="./timelapse_photos">See All Photos</a>
+        </div>
       </div>
       <div>
         <h3>
