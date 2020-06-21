@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" href="website/main.css">
   </head>
 
   <body>
