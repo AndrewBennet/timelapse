@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-PHOTO_DIR=/home/pi/Desktop/timelapse_photos
-VIDEO_DIR=/home/pi/Desktop/timelapse_videos
+PHOTO_DIR=/home/pi/Desktop/timelapse/timelapse_photos
+VIDEO_DIR=/home/pi/Desktop/timelapse/timelapse_videos
 FULL_TIMELAPSE=$VIDEO_DIR/full_timelapse.avi
 
 # Get yesterday's date
@@ -19,10 +19,10 @@ rm $YESTERDAY.txt
 rm $PHOTO_DIR/$YESTERDAY*.jpg
 
 # Concat this video onto existing video - if we have the full video
-if test -f "$FULL_TIMELAPSE"; then
+if ls "${FULL_TIMELAPSE}"; then
     echo "Joining new timelapse onto existing timelapse video"
     TEMP_FULL_TIMELAPSE=$VIDEO_DIR/full_timelapse_temp.avi
-    mencoder -oac copy -ovc copy $FULL_TIMELAPSE /$YESTERDAY.avi -o $TEMP_FULL_TIMELAPSE
+    mencoder -oac copy -ovc copy $FULL_TIMELAPSE $VIDEO_DIR/$YESTERDAY.avi -o $TEMP_FULL_TIMELAPSE
     
     rm $FULL_TIMELAPSE
     mv $TEMP_FULL_TIMELAPSE $FULL_TIMELAPSE
