@@ -26,6 +26,8 @@ if ls "${FULL_TIMELAPSE}"; then
     
     rm $FULL_TIMELAPSE
     mv $TEMP_FULL_TIMELAPSE $FULL_TIMELAPSE
+
+    rm $VIDEO_DIR/$YESTERDAY.avi
     echo "Completed."
 else
     mv $VIDEO_DIR/$YESTERDAY.avi $FULL_TIMELAPSE
